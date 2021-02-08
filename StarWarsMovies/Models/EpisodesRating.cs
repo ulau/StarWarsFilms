@@ -13,9 +13,14 @@ namespace StarWarsMovies.Models
     public enum EScoreType
     {
         Failure = 1,
-        Disappointing = 2,
-        Good= 3,
-        Excellent = 4,
-        Masterpiece =5
+        Regrettable = 2,
+        Disappointing = 3,
+        Mediocre = 4,
+        Good = 5,
+        Great = 6,
+        Excellent = 7,
+        Exceptional = 8,        
+        Masterpiece = 9,
+        Favorite = 10
     }
 }

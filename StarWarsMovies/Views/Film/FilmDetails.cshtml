@@ -1,0 +1,43 @@
+﻿@model FilmDetails
+
+<h1>Details</h1>
+<table class="table table-bordered table-striped" style="width:100%">
+    <tbody>
+        <tr>
+            <td width="20%">Episode</td>
+            <td>@Model.EpisodeId</td>
+        </tr>
+        <tr>
+            <td width="20%">Title</td>
+            <td>@Model.Title</td>
+        </tr>
+        <tr>
+            <td width="20%">Description</td>
+            <td>@Model.OpeningCrawl</td>
+        </tr>
+        <tr>
+            <td width="20%">Director</td>
+            <td>@Model.Director</td>
+        </tr>
+        <tr>
+            <td width="20%">Producer</td>
+            <td>@Model.Producer</td>
+        </tr>
+        <tr>
+            <td width="20%">Release date</td>
+            <td>@Model.ReleaseDate</td>
+        </tr>
+        <tr>
+            <td width="20%">Rating (1 - 5)</td>
+            <td>@String.Format("{0:0.0}",Model.Rating)</td>
+        </tr>
+
+    </tbody>
+</table>
+
+<div class="btn-group" role="group">
+    <a asp-action="Evaluate" asp-route-Id="@Model.EpisodeId" asp-route-title="@Model.Title" class="btn btn-info m-2">Evaluate</a>
+    <a asp-action="Index" class="btn btn-info m-2">Back to list</a>
+</div>
+
+

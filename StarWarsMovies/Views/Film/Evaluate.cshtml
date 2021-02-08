@@ -1,0 +1,19 @@
+﻿@model EpisodesRating
+
+<h1>@ViewBag.Title</h1>
+
+<form asp-action="EvaluatePost" method="post">
+        <div class="form-group">
+
+            <input type="hidden" asp-for="EpisodeId" />
+            <div class="row">
+                <select asp-for="Score" class="form-control" asp-items="Html.GetEnumSelectList<EScoreType>()">
+                </select>
+            </div>
+        </div>
+        <div class="btn-group" role="group">
+            <input type="submit" value="Evaluate" class="btn btn-info m-2" />
+            <a asp-action="Index" class="btn btn-info m-2">Back to list</a>
+        </div>
+</form>
+
